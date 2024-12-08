@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Rnd } from 'react-rnd';
+import MessageArea from './MessageArea';
 
 const DraggableResizableComponent: React.FC = () => {
-
     const [x, setX] = useState<number>(window.innerWidth - 310)
     const [y, setY] = useState<number>(-200)
 
@@ -39,41 +39,8 @@ const DraggableResizableComponent: React.FC = () => {
 
                 {/* <h3>Перетаскиваемый и изменяемый элемент</h3>
                 <p>Вы можете перетаскивать и изменять размер этого элемента.</p> */}
-
-                <div >
-                    <div
-                        id="chatBox"
-
-                        style={{ borderRadius: "15px" }}
-                    >
-                        <div
-
-                            style={{
-                                borderTopLeftRadius: "15px",
-                                borderTopRightRadius: "15px",
-                            }}
-                        >
-                            <p>имя</p>
-                        </div>
-
-                        <div>
-                            <div>
-                                история сообщений
-                            </div>
-                        </div>
-                        <div>
-                            <form>
-                                <input
-                                    type="text"
-                                    placeholder="Type message"
-                                ></input>
-                                <button>
-                                    <div>отправка</div>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                <MessageArea />
+                {/* <Chat /> */}
             </div>
         </Rnd>
         // </div>
